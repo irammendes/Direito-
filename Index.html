@@ -148,6 +148,112 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
+        /* Additional styles for new content */
+        .section {
+            margin-bottom: 3rem;
+        }
+        .highlight {
+            background-color: #f0f7ff;
+            padding: 1rem;
+            border-left: 4px solid #4A6572;
+            margin: 1rem 0;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 1.5rem 0;
+        }
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .timeline-year {
+            font-weight: bold;
+            color: #2A3F5A;
+        }
+        .comparison-table {
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+        .conclusion {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-left: 4px solid #D4A72C;
+            margin: 2rem 0;
+        }
+        .sources {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 2rem;
+        }
+        .question-block {
+            margin-bottom: 2rem;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .show-answer-btn {
+            background: #4A6572;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .answer-area {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        .difficulty {
+            font-size: 0.8rem;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+        .difficulty.basic {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+        .topic {
+            font-weight: bold;
+            color: #2A3F5A;
+            margin-bottom: 5px;
+        }
+        .type-box {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        .left-wing {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+        }
+        .right-wing {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+        .authoritarian {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+        }
+        .criticism {
+            background-color: #fff8e1;
+            padding: 1rem;
+            border-left: 4px solid #ffc107;
+        }
+        .example {
+            font-style: italic;
+            color: #666;
+        }
+        .subsection {
+            margin-left: 1rem;
+        }
+
         @media (max-width: 768px) {
             .nav-buttons button {
                 margin: 5px;
@@ -164,12 +270,14 @@
                 margin: 1rem;
             }
         }
-</style>
+    </style>
 </head>
 <body>
 
-    <h1>Aulas de Direito</h1>
-    <p>Bem-vindo às aulas de Direito. Aqui você encontrará questões para reflexão e vídeos que complementam o conteúdo estudado.</p>
+    <header>
+        <h1>Aulas de Direito</h1>
+        <p>Bem-vindo às aulas de Direito. Aqui você encontrará questões para reflexão e vídeos que complementam o conteúdo estudado.</p>
+    </header>
 
     <div class="nav-buttons">
         <button onclick="showDiscipline('politica')">Ciência Política</button>
@@ -184,457 +292,429 @@
             <p><strong>1. O que é Ciência Política e qual é o seu objeto de estudo?</strong></p>
             <p>Resposta: A Ciência Política é a disciplina que estuda os sistemas políticos, as instituições governamentais, os processos políticos e o comportamento político. Seu objeto de estudo inclui o Estado, o poder, a autoridade, as políticas públicas e as relações internacionais.</p>
         </div>
+        
         <h1>História Política e Ideologias Modernas</h1>
 
-    <div class="section">
-        <h2>A Evolução do Estado e o Absolutismo</h2>
-        
-        <h3>1. Contexto Histórico e Origens do Absolutismo</h3>
-        <ul>
-            <li><strong>Declínio do Feudalismo</strong>: A crise do sistema feudal (séculos XIV-XV), marcada por guerras, epidemias (como a Peste Negra) e a fragmentação do poder, criou a necessidade de centralização.</li>
-            <li><strong>Guerras e Conflitos</strong>: Guerras religiosas (como a Guerra dos Trinta Anos) e disputas territoriais exigiam exércitos permanentes e um estado forte para financiá-los.</li>
-            <li><strong>Renascimento Comercial</strong>: A ascensão da burguesia e o comércio internacional demandavam estabilidade e leis unificadas.</li>
-        </ul>
-
-        <h3>2. Características do Estado Absolutista</h3>
-        <ul>
-            <li><strong>Centralização do Poder</strong>: O monarca concentrava poderes legislativo, executivo e judicial, muitas vezes legitimado pela <span class="highlight">teoria do direito divino</span> (o rei como representante de Deus na Terra).</li>
-            <li><strong>Burocracia e Exército</strong>: Criação de um aparato administrativo profissional e exércitos permanentes, reduzindo a dependência da nobreza feudal.</li>
-            <li><strong>Mercantilismo</strong>: Política econômica baseada em acumulação de metais preciosos, monopólios e protecionismo para fortalecer o estado.</li>
-            <li><strong>Controle Ideológico</strong>: Uso da arte, arquitetura (ex.: <span class="example">Palácio de Versalhes</span>) e aliança com a Igreja para glorificar o poder real.</li>
-        </ul>
-
-        <h3>3. Exemplos de Estados Absolutistas</h3>
-        <div class="subsection">
-            <p><strong>França (Luís XIV, 1643-1715)</strong>: O ápice do absolutismo com o lema <em>"L'État, c'est moi"</em> ("O Estado sou eu"). Centralização em Versalhes, controle da nobreza e promoção das artes.</p>
-            <p><strong>Espanha (Dinastia Habsburgo)</strong>: Unificação territorial e expansão colonial, porém com crises econômicas devido à dependência do ouro americano.</p>
-            <p><strong>Inglaterra (Tudor e Stuart)</strong>: Henrique VIII e Isabel I fortaleceram a monarquia, mas conflitos com o Parlamento levaram à Revolução Gloriosa (1688), limitando o absolutismo.</p>
-        </div>
-
-        <h3>4. Crise e Declínio do Absolutismo</h3>
-        <ul>
-            <li><strong>Iluminismo (século XVIII)</strong>: Filósofos como Locke, Montesquieu e Rousseau criticaram o poder absoluto.</li>
-            <li><strong>Revoluções Burguesas</strong>: Revolução Inglesa (1642-1689), Revolução Francesa (1789) e Independência dos EUA (1776).</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Ideologias que Marcaram o Mundo Moderno</h2>
-        
-        <h3>1. Ideologias Políticas e Econômicas</h3>
-        <div class="subsection">
-            <h4>A. Liberalismo</h4>
+        <div class="section">
+            <h2>A Evolução do Estado e o Absolutismo</h2>
+            
+            <h3>1. Contexto Histórico e Origens do Absolutismo</h3>
             <ul>
-                <li><strong>Origens</strong>: Iluminismo (século XVIII), com pensadores como John Locke e Adam Smith.</li>
-                <li><strong>Princípios</strong>: Liberdade individual, Estado limitado, livre mercado.</li>
+                <li><strong>Declínio do Feudalismo</strong>: A crise do sistema feudal (séculos XIV-XV), marcada por guerras, epidemias (como a Peste Negra) e a fragmentação do poder, criou a necessidade de centralização.</li>
+                <li><strong>Guerras e Conflitos</strong>: Guerras religiosas (como a Guerra dos Trinta Anos) e disputas territoriais exigiam exércitos permanentes e um estado forte para financiá-los.</li>
+                <li><strong>Renascimento Comercial</strong>: A ascensão da burguesia e o comércio internacional demandavam estabilidade e leis unificadas.</li>
             </ul>
 
-            <h4>B. Conservadorismo</h4>
+            <h3>2. Características do Estado Absolutista</h3>
             <ul>
-                <li><strong>Origens</strong>: Reação às mudanças radicais da Revolução Francesa.</li>
-                <li><strong>Princípios</strong>: Valorização da tradição, hierarquia social.</li>
+                <li><strong>Centralização do Poder</strong>: O monarca concentrava poderes legislativo, executivo e judicial, muitas vezes legitimado pela <span class="highlight">teoria do direito divino</span> (o rei como representante de Deus na Terra).</li>
+                <li><strong>Burocracia e Exército</strong>: Criação de um aparato administrativo profissional e exércitos permanentes, reduzindo a dependência da nobreza feudal.</li>
+                <li><strong>Mercantilismo</strong>: Política econômica baseada em acumulação de metais preciosos, monopólios e protecionismo para fortalecer o estado.</li>
+                <li><strong>Controle Ideológico</strong>: Uso da arte, arquitetura (ex.: <span class="example">Palácio de Versalhes</span>) e aliança com a Igreja para glorificar o poder real.</li>
             </ul>
 
-            <h4>C. Socialismo e Marxismo</h4>
+            <h3>3. Exemplos de Estados Absolutistas</h3>
+            <div class="subsection">
+                <p><strong>França (Luís XIV, 1643-1715)</strong>: O ápice do absolutismo com o lema <em>"L'État, c'est moi"</em> ("O Estado sou eu"). Centralização em Versalhes, controle da nobreza e promoção das artes.</p>
+                <p><strong>Espanha (Dinastia Habsburgo)</strong>: Unificação territorial e expansão colonial, porém com crises econômicas devido à dependência do ouro americano.</p>
+                <p><strong>Inglaterra (Tudor e Stuart)</strong>: Henrique VIII e Isabel I fortaleceram a monarquia, mas conflitos com o Parlamento levaram à Revolução Gloriosa (1688), limitando o absolutismo.</p>
+            </div>
+
+            <h3>4. Crise e Declínio do Absolutismo</h3>
             <ul>
-                <li><strong>Origens</strong>: Crítica ao capitalismo industrial no século XIX.</li>
-                <li><strong>Impacto</strong>: Revolução Russa (1917), formação de estados comunistas.</li>
+                <li><strong>Iluminismo (século XVIII)</strong>: Filósofos como Locke, Montesquieu e Rousseau criticaram o poder absoluto.</li>
+                <li><strong>Revoluções Burguesas</strong>: Revolução Inglesa (1642-1689), Revolução Francesa (1789) e Independência dos EUA (1776).</li>
             </ul>
         </div>
 
-        <h3>2. Ideologias Sociais e Culturais</h3>
-        <div class="subsection">
-            <h4>A. Feminismo</h4>
-            <ul>
-                <li><strong>Evolução</strong>: Sufragismo (século XIX), direitos reprodutivos (década de 1960).</li>
-                <li><strong>Atualidade</strong>: Movimentos como #MeToo.</li>
-            </ul>
+        <div class="section">
+            <h2>Ideologias que Marcaram o Mundo Moderno</h2>
+            
+            <h3>1. Ideologias Políticas e Econômicas</h3>
+            <div class="subsection">
+                <h4>A. Liberalismo</h4>
+                <ul>
+                    <li><strong>Origens</strong>: Iluminismo (século XVIII), com pensadores como John Locke e Adam Smith.</li>
+                    <li><strong>Princípios</strong>: Liberdade individual, Estado limitado, livre mercado.</li>
+                </ul>
 
-            <h4>B. Ambientalismo</h4>
+                <h4>B. Conservadorismo</h4>
+                <ul>
+                    <li><strong>Origens</strong>: Reação às mudanças radicais da Revolução Francesa.</li>
+                    <li><strong>Princípios</strong>: Valorização da tradição, hierarquia social.</li>
+                </ul>
+
+                <h4>C. Socialismo e Marxismo</h4>
+                <ul>
+                    <li><strong>Origens</strong>: Crítica ao capitalismo industrial no século XIX.</li>
+                    <li><strong>Impacto</strong>: Revolução Russa (1917), formação de estados comunistas.</li>
+                </ul>
+            </div>
+
+            <h3>2. Ideologias Sociais e Culturais</h3>
+            <div class="subsection">
+                <h4>A. Feminismo</h4>
+                <ul>
+                    <li><strong>Evolução</strong>: Sufragismo (século XIX), direitos reprodutivos (década de 1960).</li>
+                    <li><strong>Atualidade</strong>: Movimentos como #MeToo.</li>
+                </ul>
+
+                <h4>B. Ambientalismo</h4>
+                <ul>
+                    <li><strong>Origens</strong>: Década de 1960, com a conscientização ecológica.</li>
+                    <li><strong>Atualidade</strong>: Movimentos como Fridays for Future.</li>
+                </ul>
+            </div>
+
+            <h3>3. Ideologias Contemporâneas</h3>
             <ul>
-                <li><strong>Origens</strong>: Década de 1960, com a conscientização ecológica.</li>
-                <li><strong>Atualidade</strong>: Movimentos como Fridays for Future.</li>
+                <li><strong>Populismo</strong>: Discurso antiestablishment (ex.: Trump, Bolsonaro).</li>
+                <li><strong>Transumanismo</strong>: Uso da tecnologia para superar limitações humanas.</li>
             </ul>
         </div>
 
-        <h3>3. Ideologias Contemporâneas</h3>
-        <ul>
-            <li><strong>Populismo</strong>: Discurso antiestablishment (ex.: Trump, Bolsonaro).</li>
-            <li><strong>Transumanismo</strong>: Uso da tecnologia para superar limitações humanas.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h3>Conclusão</h3>
-        <p>O estudo do absolutismo e das ideologias modernas revela como as estruturas políticas e pensamentos sociais evoluíram em resposta aos desafios de cada época. Desde a centralização do poder nos estados nacionais até os complexos debates ideológicos contemporâneos, essas transformações continuam a moldar nosso mundo atual.</p>
-    </div>
-        
+        <div class="section">
+            <h3>Conclusão</h3>
+            <p>O estudo do absolutismo e das ideologias modernas revela como as estruturas políticas e pensamentos sociais evoluíram em resposta aos desafios de cada época. Desde a centralização do poder nos estados nacionais até os complexos debates ideológicos contemporâneos, essas transformações continuam a moldar nosso mundo atual.</p>
+        </div>
+            
         <h1>Pesquisa Completa sobre Populismo</h1>
-    
-    <div class="section">
-        <h2>1. Introdução</h2>
-        <p>O <strong>populismo</strong> é um estilo político que se baseia na <strong>retórica antiestablishment</strong>, na <strong>polarização entre "povo" e "elite"</strong> e no <strong>carisma de líderes personalistas</strong>. Não é uma ideologia fixa, mas uma estratégia de mobilização política que pode ser adotada tanto por governos de <strong>direita</strong> quanto de <strong>esquerda</strong>.</p>
-    </div>
-    
-    <div class="section">
-        <h2>2. Características do Populismo</h2>
-        <div class="highlight">
-            <ul>
-                <li><strong>Discurso antissistema</strong>: Crítica a partidos tradicionais, mídia e instituições.</li>
-                <li><strong>Liderança carismática</strong>: Culto à personalidade do líder (ex.: "salvador da pátria").</li>
-                <li><strong>Polarização</strong>: Divisão entre "nós" (o povo) vs. "eles" (a elite corrupta).</li>
-                <li><strong>Promessas simplistas</strong>: Soluções fáceis para problemas complexos.</li>
-                <li><strong>Comunicação direta</strong>: Uso de redes sociais e discursos emocionais.</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="section">
-        <h2>3. Tipos de Populismo</h2>
         
-        <div class="type-box left-wing">
-            <h3>3.1. Populismo de Esquerda</h3>
-            <ul>
-                <li>Foco em <strong>justiça social</strong> e <strong>redistribuição de renda</strong>.</li>
-                <li>Exemplos:
-                    <ul>
-                        <li><strong>Hugo Chávez</strong> (Venezuela, 1999-2013)</li>
-                        <li><strong>Evo Morales</strong> (Bolívia, 2006-2019)</li>
-                    </ul>
-                </li>
-            </ul>
+        <div class="section">
+            <h2>1. Introdução</h2>
+            <p>O <strong>populismo</strong> é um estilo político que se baseia na <strong>retórica antiestablishment</strong>, na <strong>polarização entre "povo" e "elite"</strong> e no <strong>carisma de líderes personalistas</strong>. Não é uma ideologia fixa, mas uma estratégia de mobilização política que pode ser adotada tanto por governos de <strong>direita</strong> quanto de <strong>esquerda</strong>.</p>
         </div>
         
-        <div class="type-box right-wing">
-            <h3>3.2. Populismo de Direita</h3>
-            <ul>
-                <li>Ênfase em <strong>nacionalismo</strong>, <strong>imigração</strong> e <strong>valores tradicionais</strong>.</li>
-                <li>Exemplos:
-                    <ul>
-                        <li><strong>Donald Trump</strong> (EUA, 2017-2021)</li>
-                        <li><strong>Jair Bolsonaro</strong> (Brasil, 2019-2022)</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="type-box authoritarian">
-            <h3>3.3. Populismo Autoritário</h3>
-            <ul>
-                <li>Uso de <strong>mecanismos antidemocráticos</strong> para concentrar poder.</li>
-                <li>Exemplo: <strong>Viktor Orbán</strong> (Hungria, 2010-presente).</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="section">
-        <h2>4. Populismo na História</h2>
-        
-        <h3>4.1. Primeiras Manifestações (Século XIX-XX)</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <span class="timeline-year">1930-1945</span>
-                <p><strong>Getúlio Vargas</strong> no Brasil - Trabalhismo e nacionalismo econômico</p>
-            </div>
-            <div class="timeline-item">
-                <span class="timeline-year">1946-1955</span>
-                <p><strong>Juan Perón</strong> na Argentina - Justicialismo e direitos trabalhistas</p>
+        <div class="section">
+            <h2>2. Características do Populismo</h2>
+            <div class="highlight">
+                <ul>
+                    <li><strong>Discurso antissistema</strong>: Crítica a partidos tradicionais, mídia e instituições.</li>
+                    <li><strong>Liderança carismática</strong>: Culto à personalidade do líder (ex.: "salvador da pátria").</li>
+                    <li><strong>Polarização</strong>: Divisão entre "nós" (o povo) vs. "eles" (a elite corrupta).</li>
+                    <li><strong>Promessas simplistas</strong>: Soluções fáceis para problemas complexos.</li>
+                    <li><strong>Comunicação direta</strong>: Uso de redes sociais e discursos emocionais.</li>
+                </ul>
             </div>
         </div>
         
-        <h3>4.2. Século XXI</h3>
-        <ul>
-            <li><strong>Crise de 2008</strong>: Aumento do populismo após a crise financeira global.</li>
-            <li><strong>Redes sociais</strong>: Ferramentas para líderes populistas contornarem a mídia tradicional.</li>
-        </ul>
-    </div>
-    
-    <div class="section">
-        <h2>5. Críticas ao Populismo</h2>
-        <div class="criticism">
+        <div class="section">
+            <h2>3. Tipos de Populismo</h2>
+            
+            <div class="type-box left-wing">
+                <h3>3.1. Populismo de Esquerda</h3>
+                <ul>
+                    <li>Foco em <strong>justiça social</strong> e <strong>redistribuição de renda</strong>.</li>
+                    <li>Exemplos:
+                        <ul>
+                            <li><strong>Hugo Chávez</strong> (Venezuela, 1999-2013)</li>
+                            <li><strong>Evo Morales</strong> (Bolívia, 2006-2019)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="type-box right-wing">
+                <h3>3.2. Populismo de Direita</h3>
+                <ul>
+                    <li>Ênfase em <strong>nacionalismo</strong>, <strong>imigração</strong> e <strong>valores tradicionais</strong>.</li>
+                    <li>Exemplos:
+                        <ul>
+                            <li><strong>Donald Trump</strong> (EUA, 2017-2021)</li>
+                            <li><strong>Jair Bolsonaro</strong> (Brasil, 2019-2022)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="type-box authoritarian">
+                <h3>3.3. Populismo Autoritário</h3>
+                <ul>
+                    <li>Uso de <strong>mecanismos antidemocráticos</strong> para concentrar poder.</li>
+                    <li>Exemplo: <strong>Viktor Orbán</strong> (Hungria, 2010-presente).</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>4. Populismo na História</h2>
+            
+            <h3>4.1. Primeiras Manifestações (Século XIX-XX)</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-year">1930-1945</span>
+                    <p><strong>Getúlio Vargas</strong> no Brasil - Trabalhismo e nacionalismo econômico</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1946-1955</span>
+                    <p><strong>Juan Perón</strong> na Argentina - Justicialismo e direitos trabalhistas</p>
+                </div>
+            </div>
+            
+            <h3>4.2. Século XXI</h3>
             <ul>
-                <li><strong>Erosão da democracia</strong>: Ataques a instituições e divisão social.</li>
-                <li><strong>Soluções irrealistas</strong>: Promessas que ignoram complexidades econômicas.</li>
-                <li><strong>Personalismo excessivo</strong>: Risco de autoritarismo e corrupção.</li>
+                <li><strong>Crise de 2008</strong>: Aumento do populismo após a crise financeira global.</li>
+                <li><strong>Redes sociais</strong>: Ferramentas para líderes populistas contornarem a mídia tradicional.</li>
             </ul>
         </div>
-    </div>
-    
-    <div class="conclusion">
-        <h2>6. Conclusão</h2>
-        <p>O populismo é uma <strong>estratégia política poderosa</strong> em tempos de crise, mas seu <strong>antielitismo radical</strong> e <strong>personalismo</strong> podem ameaçar a democracia. Seu estudo é essencial para entender a política contemporânea.</p>
-    </div>
-    
-    <div class="sources">
-        <h3>Fontes Recomendadas:</h3>
-        <ul>
-            <li><strong>"O Povo contra a Democracia"</strong> (Yascha Mounk, 2018)</li>
-            <li><strong>"Como Morre a Democracia"</strong> (Steven Levitsky e Daniel Ziblatt, 2018)</li>
-            <li><strong>Documentário</strong>: "The Great Hack" (2019, sobre populismo digital)</li>
-        </ul>
-        <p>🔎 <em>O populismo continua moldando eleções e protestos globais no século XXI.</em></p>
-    </div>
         
+        <div class="section">
+            <h2>5. Críticas ao Populismo</h2>
+            <div class="criticism">
+                <ul>
+                    <li><strong>Erosão da democracia</strong>: Ataques a instituições e divisão social.</li>
+                    <li><strong>Soluções irrealistas</strong>: Promessas que ignoram complexidades econômicas.</li>
+                    <li><strong>Personalismo excessivo</strong>: Risco de autoritarismo e corrupção.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="conclusion">
+            <h2>6. Conclusão</h2>
+            <p>O populismo é uma <strong>estratégia política poderosa</strong> em tempos de crise, mas seu <strong>antielitismo radical</strong> e <strong>personalismo</strong> podem ameaçar a democracia. Seu estudo é essencial para entender a política contemporânea.</p>
+        </div>
+        
+        <div class="sources">
+            <h3>Fontes Recomendadas:</h3>
+            <ul>
+                <li><strong>"O Povo contra a Democracia"</strong> (Yascha Mounk, 2018)</li>
+                <li><strong>"Como Morre a Democracia"</strong> (Steven Levitsky e Daniel Ziblatt, 2018)</li>
+                <li><strong>Documentário</strong>: "The Great Hack" (2019, sobre populismo digital)</li>
+            </ul>
+            <p>🔎 <em>O populismo continua moldando eleções e protestos globais no século XXI.</em></p>
+        </div>
+            
         <h1>Questionário sobre Absolutismo e Ideologias Modernas</h1>
 
-    <div class="section">
-        <h2>Parte 1: Absolutismo</h2>
-        
-        <h3>Nível Básico</h3>
-        
-        <div class="question-block">
-            <div class="topic">Absolutismo - Conceito</div>
-            <div class="question">1. O que foi o absolutismo monárquico e em qual período histórico predominou? <span class="difficulty basic">Básico</span></div>
-            <button class="show-answer-btn" onclick="showAnswer(1)">Mostrar Resposta</button>
-            <div class="answer-area" id="answer1">
-                <div class="answer">O absolutismo monárquico foi um sistema político em que o rei concentrava todos os poderes do Estado (executivo, legislativo e judiciário). Predominou principalmente entre os séculos XVI e XVIII na Europa, durante o período conhecido como Antigo Regime.</div>
+        <div class="section">
+            <h2>Parte 1: Absolutismo</h2>
+            
+            <h3>Nível Básico</h3>
+            
+            <div class="question-block">
+                <div class="topic">Absolutismo - Conceito</div>
+                <div class="question">1. O que foi o absolutismo monárquico e em qual período histórico predominou? <span class="difficulty basic">Básico</span></div>
+                <button class="show-answer-btn" onclick="showAnswer(1)">Mostrar Resposta</button>
+                <div class="answer-area" id="answer1">
+                    <div class="answer">O absolutismo monárquico foi um sistema político em que o rei concentrava todos os poderes do Estado (executivo, legislativo e judiciário). Predominou principalmente entre os séculos XVI e XVIII na Europa, durante o período conhecido como Antigo Regime.</div>
+                </div>
             </div>
-        </div>
-        
-        <div class="question-block">
-            <div class="topic">Absolutismo - Características</div>
-            <div class="question">2. Cite duas características principais do Estado absolutista. <span class="difficulty basic">Básico</span></div>
-            <button class="show-answer-btn" onclick="showAnswer(2)">Mostrar Resposta</button>
-            <div class="answer-area" id="answer2">
-                <div class="answer">1) Centralização do poder nas mãos do monarca; 2) Controle sobre a nobreza através da criação de uma burocracia estatal e exércitos permanentes; 3) Uso da teoria do direito divino para legitimar o poder real.</div>
+            
+            <div class="question-block">
+                <div class="topic">Absolutismo - Características</div>
+                <div class="question">2. Cite duas características principais do Estado absolutista. <span class="difficulty basic">Básico</span></div>
+                <button class="show-answer-btn" onclick="showAnswer(2)">Mostrar Resposta</button>
+                <div class="answer-area" id="answer2">
+                    <div class="answer">1) Centralização do poder nas mãos do monarca; 2) Controle sobre a nobreza através da criação de uma burocracia estatal e exércitos permanentes; 3) Uso da teoria do direito divino para legitimar o poder real.</div>
+                </div>
             </div>
-        </div>
+            
+            <h1>Comunismo e Anarquismo: Um Estudo Comparativo</h1>
         
-        <h1>Comunismo e Anarquismo: Um Estudo Comparativo</h1>
-    
-    <h2>1. Introdução</h2>
-    <p>O <strong>comunismo</strong> e o <strong>anarquismo</strong> são duas correntes políticas de esquerda que surgiram no século XIX como críticas ao capitalismo e ao Estado burguês.</p>
-    
-    <h2>2. Comunismo</h2>
-    <h3>2.1. Origens e Fundamentos Teóricos</h3>
-    <p>Desenvolvido por <strong>Karl Marx</strong> e <strong>Friedrich Engels</strong> em obras como <em>O Manifesto Comunista</em> (1848).</p>
-    
-    <div class="highlight">
-        <h3>2.2. Principais Características</h3>
-        <ul>
-            <li><strong>Ditadura do proletariado</strong>: Fase transitória de controle operário</li>
-            <li><strong>Economia planificada</strong>: Estado controla os meios de produção</li>
-        </ul>
-    </div>
-    
-    <h2>3. Anarquismo</h2>
-    
-    <h2>4. Comparativo</h2>
-    <table class="comparison-table">
-        <tr>
-            <th>Aspecto</th>
-            <th>Comunismo</th>
-            <th>Anarquismo</th>
-        </tr>
-        <tr>
-            <td>Papel do Estado</td>
-            <td>Estado temporário</td>
-            <td>Abolição imediata</td>
-        </tr>
-        
-    </table>
-    
-    <h2>5. Conclusão</h2>
-    <p>Enquanto o comunismo defende um Estado transitório, o anarquismo rejeita qualquer forma de autoridade.</p>
-        
-        <div class="question-block">
-            <div class="topic">Absolutismo - Luís XIV</div>
-            <div class="question">3. Por que Luís XIV da França é considerado o símbolo do absolutismo? <span class="difficulty basic">Básico</span></div>
-            <button class="show-answer-btn" onclick="showAnswer(3)">Mostrar Resposta</button>
-            <div class="answer-area" id="answer3">
-                <div class="answer">Luís XIV (1638-1715) é considerado o símbolo do absolutismo por sua famosa frase "L'État, c'est moi" ("O Estado sou eu"), que sintetiza a concentração de poder. Seu longo reinado (72 anos) foi marcado pela centralização administrativa, controle da nobreza através do Palácio de Versalhes, e fortalecimento do Estado francês.</div>
-            </div>
-        </div>
-        
-        <h1>Fascismo e Nazismo - Estudo Comparativo</h1>
-    
-    <div class="section">
         <h2>1. Introdução</h2>
-        <p>O <strong>fascismo</strong> e o <strong>nazismo</strong> foram regimes totalitários que surgiram no período entre-guerras (1919-1939) na Europa. Ambos se caracterizaram por nacionalismo extremo, autoritarismo, militarismo e perseguição a minorias. Apesar de semelhantes em muitos aspectos, possuíam diferenças ideológicas e de implementação.</p>
-    </div>
-    
-    <div class="section">
-        <h2>2. Fascismo</h2>
+        <p>O <strong>comunismo</strong> e o <strong>anarquismo</strong> são duas correntes políticas de esquerda que surgiram no século XIX como críticas ao capitalismo e ao Estado burguês.</p>
         
-        <h3>2.1. Origens e Contexto Histórico</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <span class="timeline-year">1919</span>
-                <p>Fundação dos Fasci Italiani di Combattimento por Benito Mussolini</p>
-            </div>
-            <div class="timeline-item">
-                <span class="timeline-year">1922</span>
-                <p>Marcha sobre Roma - Mussolini é nomeado primeiro-ministro</p>
-            </div>
-            <div class="timeline-item">
-                <span class="timeline-year">1925</span>
-                <p>Mussolini estabelece ditadura fascista na Itália</p>
-            </div>
-        </div>
+        <h2>2. Comunismo</h2>
+        <h3>2.1. Origens e Fundamentos Teóricos</h3>
+        <p>Desenvolvido por <strong>Karl Marx</strong> e <strong>Friedrich Engels</strong> em obras como <em>O Manifesto Comunista</em> (1848).</p>
         
-        <h3>2.2. Características Principais</h3>
         <div class="highlight">
+            <h3>2.2. Principais Características</h3>
             <ul>
-                <li><strong>Totalitarismo</strong>: Estado controlava todos os aspectos da vida (política, economia, cultura)</li>
-                <li><strong>Nacionalismo extremo</strong>: Culto à pátria e ao líder (Duce)</li>
-                <li><strong>Anticomunismo</strong>: Perseguição a socialistas e sindicatos</li>
-                <li><strong>Corporativismo</strong>: Economia controlada por corporações estatais</li>
-                <li><strong>Propaganda e culto à personalidade</strong>: Uso de meios de comunicação para exaltar Mussolini</li>
+                <li><strong>Ditadura do proletariado</strong>: Fase transitória de controle operário</li>
+                <li><strong>Economia planificada</strong>: Estado controla os meios de produção</li>
             </ul>
         </div>
         
-        <h3>2.3. Fim do Fascismo Italiano</h3>
-        <p>Derrota na <strong>Segunda Guerra Mundial</strong> (1939-1945). Mussolini foi capturado e executado em <strong>1945</strong> por partigiani (resistência italiana).</p>
-    </div>
-    
-    <div class="section">
-        <h2>3. Nazismo</h2>
+        <h2>3. Anarquismo</h2>
         
-        <h3>3.1. Origens e Contexto Histórico</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <span class="timeline-year">1919</span>
-                <p>Fundação do Partido dos Trabalhadores Alemães (antecessor do NSDAP)</p>
-            </div>
-            <div class="timeline-item">
-                <span class="timeline-year">1923</span>
-                <p>Putsch da Cervejaria - Tentativa fracassada de golpe</p>
-            </div>
-            <div class="timeline-item">
-                <span class="timeline-year">1933</span>
-                <p>Hitler é nomeado chanceler da Alemanha</p>
-            </div>
-            <div class="timeline-item">
-                <span class="timeline-year">1934</span>
-                <p>Hitler consolida poder como Führer após a morte de Hindenburg</p>
-            </div>
-        </div>
-        
-        <h3>3.2. Características Principais</h3>
-        <div class="highlight">
-            <ul>
-                <li><strong>Totalitarismo e culto ao Führer</strong>: Hitler concentrou todos os poderes</li>
-                <li><strong>Racismo e antissemitismo</strong>: Teoria da "raça ariana" superior e perseguição aos judeus</li>
-                <li><strong>Expansionismo militar</strong>: Busca do Lebensraum ("espaço vital")</li>
-                <li><strong>Propaganda e controle social</strong>: Uso de rádio, cinema e Juventude Hitlerista</li>
-                <li><strong>Eugenia e perseguição a minorias</strong>: Extermínio de judeus, ciganos, homossexuais e deficientes</li>
-            </ul>
-        </div>
-        
-        <h3>3.3. Holocausto (Shoah)</h3>
-        <p><strong>Solução Final</strong> (1941-1945): Extermínio sistemático de <strong>6 milhões de judeus</strong> em campos de concentração (Auschwitz, Treblinka). Outros grupos perseguidos: Testemunhas de Jeová, comunistas, eslavos.</p>
-        
-        <h3>3.4. Fim do Nazismo</h3>
-        <p>Derrota na <strong>Segunda Guerra Mundial</strong> (1945). Hitler suicidou-se em seu bunker em <strong>30 de abril de 1945</strong>. Julgamento de Nuremberg (1945-1946): Líderes nazistas foram condenados por crimes contra a humanidade.</p>
-    </div>
-    
-    <div class="section">
-        <h2>4. Diferenças entre Fascismo e Nazismo</h2>
-        <table>
+        <h2>4. Comparativo</h2>
+        <table class="comparison-table">
             <tr>
                 <th>Aspecto</th>
-                <th>Fascismo (Itália)</th>
-                <th>Nazismo (Alemanha)</th>
+                <th>Comunismo</th>
+                <th>Anarquismo</th>
             </tr>
             <tr>
-                <td>Líder</td>
-                <td>Benito Mussolini</td>
-                <td>Adolf Hitler</td>
+                <td>Papel do Estado</td>
+                <td>Estado temporário</td>
+                <td>Abolição imediata</td>
             </tr>
-            <tr>
-                <td>Ideologia Racial</td>
-                <td>Menos ênfase na raça</td>
-                <td>Racismo extremo (arianismo)</td>
-            </tr>
-            <tr>
-                <td>Expansionismo</td>
-                <td>Busca de império colonial</td>
-                <td>Lebensraum ("espaço vital")</td>
-            </tr>
-            <tr>
-                <td>Antissemitismo</td>
-                <td>Presente, mas não sistemático</td>
-                <td>Holocausto (extermínio em massa)</td>
-            </tr>
-            <tr>
-                <td>Economia</td>
-                <td>Corporativismo estatal</td>
-                <td>Controle estatal com indústria bélica</td>
-            </tr>
+            
         </table>
-    </div>
-    
-    <div class="section">
-        <h2>5. Legado e Atualidade</h2>
-        <ul>
-            <li><strong>Neonazismo e extrema-direita</strong>: Grupos que ainda propagam ideias nazifascistas</li>
-            <li><strong>Leis antineonazistas</strong>: Muitos países criminalizam a apologia ao nazismo</li>
-            <li><strong>Memorial do Holocausto</strong>: Museus e dias de lembrança (27 de janeiro - Dia Internacional em Memória das Vítimas do Holocausto)</li>
-        </ul>
-    </div>
-    
-    <div class="conclusion">
-        <h2>6. Conclusão</h2>
-        <p>Tanto o <strong>fascismo</strong> quanto o <strong>nazismo</strong> foram regimes brutais que causaram milhões de mortes. Seus legados servem como alerta contra o autoritarismo, o racismo e a supressão das liberdades individuais. O estudo desses regimes é essencial para evitar a repetição de tragédias semelhantes.</p>
-    </div>
-    
-    <div class="sources">
-        <h3>Fontes Sugeridas para Pesquisa:</h3>
-        <ul>
-            <li><strong>"Minha Luta" (Mein Kampf)</strong> - Adolf Hitler (1925)</li>
-            <li><strong>"A Doutrina do Fascismo"</strong> - Benito Mussolini (1932)</li>
-            <li><strong>"O Holocausto: Uma Nova História"</strong> - Laurence Rees</li>
-            <li><strong>Documentários</strong>: "A Queda" (2004), "O Ovo da Serpente" (1977)</li>
-        </ul>
-        <p>🔎 <em>Esta pesquisa pode ser expandida com análises sobre a influência desses regimes em movimentos políticos atuais.</em></p>
-    </div>
         
-    </div>
-
-    <div class="section">
-        <h2>Parte 2: Ideologias Modernas</h2>
-        
-        <h3>Nível Básico</h3>
-        
-        <div class="question-block">
-            <div class="topic">Liberalismo</div>
-            <div class="question">11. Defina liberalismo e cite um pensador importante dessa corrente. <span class="difficulty basic">Básico</span></div>
-            <button class="show-answer-btn" onclick="showAnswer(11)">Mostrar Resposta</button>
-            <div class="answer-area" id="answer11">
-                <div class="answer">Liberalismo é uma ideologia política e econômica que defende a liberdade individual, limitando a intervenção do Estado na vida das pessoas e na economia. Princípios incluem: direitos naturais, livre mercado, propriedade privada e governo representativo. Pensadores importantes: John Locke (pai do liberalismo político), Adam Smith (liberalismo econômico).</div>
+        <h2>5. Conclusão</h2>
+        <p>Enquanto o comunismo defende um Estado transitório, o anarquismo rejeita qualquer forma de autoridade.</p>
+            
+            <div class="question-block">
+                <div class="topic">Absolutismo - Luís XIV</div>
+                <div class="question">3. Por que Luís XIV da França é considerado o símbolo do absolutismo? <span class="difficulty basic">Básico</span></div>
+                <button class="show-answer-btn" onclick="showAnswer(3)">Mostrar Resposta</button>
+                <div class="answer-area" id="answer3">
+                    <div class="answer">Luís XIV (1638-1715) é considerado o símbolo do absolutismo por sua famosa frase "L'État, c'est moi" ("O Estado sou eu"), que sintetiza a concentração de poder. Seu longo reinado (72 anos) foi marcado pela centralização administrativa, controle da nobreza através do Palácio de Versalhes, e fortalecimento do Estado francês.</div>
+                </div>
             </div>
+            
+            <h1>Fascismo e Nazismo - Estudo Comparativo</h1>
+        
+        <div class="section">
+            <h2>1. Introdução</h2>
+            <p>O <strong>fascismo</strong> e o <strong>nazismo</strong> foram regimes totalitários que surgiram no período entre-guerras (1919-1939) na Europa. Ambos se caracterizaram por nacionalismo extremo, autoritarismo, militarismo e perseguição a minorias. Apesar de semelhantes em muitos aspectos, possuíam diferenças ideológicas e de implementação.</p>
         </div>
-     
-    </div>
+        
+        <div class="section">
+            <h2>2. Fascismo</h2>
+            
+            <h3>2.1. Origens e Contexto Histórico</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-year">1919</span>
+                    <p>Fundação dos Fasci Italiani di Combattimento por Benito Mussolini</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1922</span>
+                    <p>Marcha sobre Roma - Mussolini é nomeado primeiro-ministro</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1925</span>
+                    <p>Mussolini estabelece ditadura fascista na Itália</p>
+                </div>
+            </div>
+            
+            <h3>2.2. Características Principais</h3>
+            <div class="highlight">
+                <ul>
+                    <li><strong>Totalitarismo</strong>: Estado controlava todos os aspectos da vida (política, economia, cultura)</li>
+                    <li><strong>Nacionalismo extremo</strong>: Culto à pátria e ao líder (Duce)</li>
+                    <li><strong>Anticomunismo</strong>: Perseguição a socialistas e sindicatos</li>
+                    <li><strong>Corporativismo</strong>: Economia controlada por corporações estatais</li>
+                    <li><strong>Propaganda e culto à personalidade</strong>: Uso de meios de comunicação para exaltar Mussolini</li>
+                </ul>
+            </div>
+            
+            <h3>2.3. Fim do Fascismo Italiano</h3>
+            <p>Derrota na <strong>Segunda Guerra Mundial</strong> (1939-1945). Mussolini foi capturado e executado em <strong>1945</strong> por partigiani (resistência italiana).</p>
+        </div>
+        
+        <div class="section">
+            <h2>3. Nazismo</h2>
+            
+            <h3>3.1. Origens e Contexto Histórico</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-year">1919</span>
+                    <p>Fundação do Partido dos Trabalhadores Alemães (antecessor do NSDAP)</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1923</span>
+                    <p>Putsch da Cervejaria - Tentativa fracassada de golpe</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1933</span>
+                    <p>Hitler é nomeado chanceler da Alemanha</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1934</span>
+                    <p>Hitler consolida poder como Führer após a morte de Hindenburg</p>
+                </div>
+            </div>
+            
+            <h3>3.2. Características Principais</h3>
+            <div class="highlight">
+                <ul>
+                    <li><strong>Totalitarismo e culto ao Führer</strong>: Hitler concentrou todos os poderes</li>
+                    <li><strong>Racismo e antissemitismo</strong>: Teoria da "raça ariana" superior e perseguição aos judeus</li>
+                    <li><strong>Expansionismo militar</strong>: Busca do Lebensraum ("espaço vital")</li>
+                    <li><strong>Propaganda e controle social</strong>: Uso de rádio, cinema e Juventude Hitlerista</li>
+                    <li><strong>Eugenia e perseguição a minorias</strong>: Extermínio de judeus, ciganos, homossexuais e deficientes</li>
+                </ul>
+            </div>
+            
+            <h3>3.3. Holocausto (Shoah)</h3>
+            <p><strong>Solução Final</strong> (1941-1945): Extermínio sistemático de <strong>6 milhões de judeus</strong> em campos de concentração (Auschwitz, Treblinka). Outros grupos perseguidos: Testemunhas de Jeová, comunistas, eslavos.</p>
+            
+            <h3>3.4. Fim do Nazismo</h3>
+            <p>Derrota na <strong>Segunda Guerra Mundial</strong> (1945). Hitler suicidou-se em seu bunker em <strong>30 de abril de 1945</strong>. Julgamento de Nuremberg (1945-1946): Líderes nazistas foram condenados por crimes contra a humanidade.</p>
+        </div>
+        
+        <div class="section">
+            <h2>4. Diferenças entre Fascismo e Nazismo</h2>
+            <table>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Fascismo (Itália)</th>
+                    <th>Nazismo (Alemanha)</th>
+                </tr>
+                <tr>
+                    <td>Líder</td>
+                    <td>Benito Mussolini</td>
+                    <td>Adolf Hitler</td>
+                </tr>
+                <tr>
+                    <td>Ideologia Racial</td>
+                    <td>Menos ênfase na raça</td>
+                    <td>Racismo extremo (arianismo)</td>
+                </tr>
+                <tr>
+                    <td>Expansionismo</td>
+                    <td>Busca de império colonial</td>
+                    <td>Lebensraum ("espaço vital")</td>
+                </tr>
+                <tr>
+                    <td>Antissemitismo</td>
+                    <td>Presente, mas não sistemático</td>
+                    <td>Holocausto (extermínio em massa)</td>
+                </tr>
+                <tr>
+                    <td>Economia</td>
+                    <td>Corporativismo estatal</td>
+                    <td>Controle estatal com indústria bélica</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>5. Legado e Atualidade</h2>
+            <ul>
+                <li><strong>Neonazismo e extrema-direita</strong>: Grupos que ainda propagam ideias nazifascistas</li>
+                <li><strong>Leis antineonazistas</strong>: Muitos países criminalizam a apologia ao nazismo</li>
+                <li><strong>Memorial do Holocausto</strong>: Museus e dias de lembrança (27 de janeiro - Dia Internacional em Memória das Vítimas do Holocausto)</li>
+            </ul>
+        </div>
+        
+        <div class="conclusion">
+            <h2>6. Conclusão</h2>
+            <p>Tanto o <strong>fascismo</strong> quanto o <strong>nazismo</strong> foram regimes brutais que causaram milhões de mortes. Seus legados servem como alerta contra o autoritarismo, o racismo e a supressão das liberdades individuais. O estudo desses regimes é essencial para evitar a repetição de tragédias semelhantes.</p>
+        </div>
+        
+        <div class="sources">
+            <h3>Fontes Sugeridas para Pesquisa:</h3>
+            <ul>
+                <li><strong>"Minha Luta" (Mein Kampf)</strong> - Adolf Hitler (1925)</li>
+                <li><strong>"A Doutrina do Fascismo"</strong> - Benito Mussolini (1932)</li>
+                <li><strong>"O Holocausto: Uma Nova História"</strong> - Laurence Rees</li>
+                <li><strong>Documentários</strong>: "A Queda" (2004), "O Ovo da Serpente" (1977)</li>
+            </ul>
+            <p>🔎 <em>Esta pesquisa pode ser expandida com análises sobre a influência desses regimes em movimentos políticos atuais.</em></p>
+        </div>
+            
+        </div>
 
-    <script>
-        function showAnswer(questionNum) {
-            const answerElement = document.getElementById(`answer${questionNum}`);
-            const button = event.target;
+        <div class="section">
+            <h2>Parte 2: Ideologias Modernas</h2>
             
-            if (answerElement.style.display === 'block') {
-                answerElement.style.display = 'none';
-                button.textContent = 'Mostrar Resposta';
-            } else {
-                answerElement.style.display = 'block';
-                button.textContent = 'Ocultar Resposta';
-            }
-        }
-
-        // Função para mostrar todas as respostas (opcional)
-        function showAllAnswers() {
-            const answers = document.querySelectorAll('.answer-area');
-            const buttons = document.querySelectorAll('.show-answer-btn');
+            <h3>Nível Básico</h3>
             
-            answers.forEach(answer => {
-                answer.style.display = 'block';
-            });
-            
-            buttons.forEach(button => {
-                button.textContent = 'Ocultar Resposta';
-            });
-        }
-    </script>
+            <div class="question-block">
+                <div class="topic">Liberalismo</div>
+                <div class="question">11. Defina liberalismo e cite um pensador importante dessa corrente. <span class="difficulty basic">Básico</span></div>
+                <button class="show-answer-btn" onclick="showAnswer(11)">Mostrar Resposta</button>
+                <div class="answer-area" id="answer11">
+                    <div class="answer">Liberalismo é uma ideologia política e econômica que defende a liberdade individual, limitando a intervenção do Estado na vida das pessoas e na economia. Princípios incluem: direitos naturais, livre mercado, propriedade privada e governo representativo. Pensadores importantes: John Locke (pai do liberalismo político), Adam Smith (liberalismo econômico).</div>
+                </div>
+            </div>
+         
+        </div>
 
         <div class="question">
             <p><strong>2. Qual a diferença entre Estado e Governo?</strong></p>
@@ -678,129 +758,130 @@
         <h2>Filosofia</h2>
         <h1>Filosofia Grega: Sócrates e a Democracia Ateniense</h1>
 
-    <div class="qa-container">
-        <h2>Pensamento Socrático</h2>
-        
-        <div class="question">Qual a contribuição de Sócrates para o direito?</div>
-        <div class="answer">
-            <p>Sócrates (469–399 a.C.) influenciou indiretamente a filosofia jurídica através de:</p>
-            <ul>
-                <li><strong>Método socrático</strong>: Diálogo racional para análise crítica das leis</li>
-                <li><strong>Justiça como virtude</strong>: Leis devem refletir princípios éticos</li>
-                <li><strong>Questionamento da autoridade</strong>: Relação entre lei e consciência individual</li>
-                <li><strong>Direito natural</strong>: Ideia de justiça superior às leis humanas</li>
-            </ul>
-        </div>
-        
-        <div class="question">Resumo do pensamento socrático</div>
-        <div class="answer">
-            <p>Princípios fundamentais:</p>
-            <ol>
-                <li><strong>Método socrático</strong>: Ironia e maiêutica para revelar a verdade</li>
-                <li><strong>Ética como centro</strong>: Virtude = conhecimento ("Ninguém erra voluntariamente")</li>
-                <li><strong>Crítica aos sofistas</strong>: Oposição ao relativismo moral</li>
-                <li><strong>Morte como exemplo</strong>: Obediência às leis mesmo quando injustas</li>
-            </ol>
-        </div>
-    </div>
-
-    <div class="qa-container">
-        <h2>Democracia Ateniense</h2>
-        
-        <div class="question">Como foi criada a democracia ateniense?</div>
-        <div class="answer">
-            <p><strong>Evolução histórica:</strong></p>
-            <table>
-                <tr>
-                    <th>Reformador</th>
-                    <th>Contribuição</th>
-                    <th>Data</th>
-                </tr>
-                <tr>
-                    <td>Sólon</td>
-                    <td>Abolição da escravidão por dívidas, criação da Bulé</td>
-                    <td>594 a.C.</td>
-                </tr>
-                <tr>
-                    <td>Clístenes</td>
-                    <td>Reorganização tribal, criação da Eclésia e ostracismo</td>
-                    <td>508/507 a.C.</td>
-                </tr>
-                <tr>
-                    <td>Péricles</td>
-                    <td>Pagamento para cargos públicos (misthophoria)</td>
-                    <td>Séc. V a.C.</td>
-                </tr>
-            </table>
-        </div>
-        
-        <div class="question">Detalhes sobre o funcionamento da democracia ateniense</div>
-        <div class="answer">
-            <p><strong>Instituições principais:</strong></p>
-            <ul>
-                <li><strong>Eclésia</strong>: Assembleia popular com poder supremo</li>
-                <li><strong>Boulé</strong>: Conselho dos 500 (50 por tribo)</li>
-                <li><strong>Helieia</strong>: Tribunal popular com 6.000 jurados</li>
-                <li><strong>Ostracismo</strong>: Exílio político por 10 anos</li>
-            </ul>
+        <div class="qa-container">
+            <h2>Pensamento Socrático</h2>
             
-            <div class="comparison-table">
-                <p><strong>Comparação com democracia moderna:</strong></p>
+            <div class="question">Qual a contribuição de Sócrates para o direito?</div>
+            <div class="answer">
+                <p>Sócrates (469–399 a.C.) influenciou indiretamente a filosofia jurídica através de:</p>
+                <ul>
+                    <li><strong>Método socrático</strong>: Diálogo racional para análise crítica das leis</li>
+                    <li><strong>Justiça como virtude</strong>: Leis devem refletir princípios éticos</li>
+                    <li><strong>Questionamento da autoridade</strong>: Relação entre lei e consciência individual</li>
+                    <li><strong>Direito natural</strong>: Ideia de justiça superior às leis humanas</li>
+                </ul>
+            </div>
+            
+            <div class="question">Resumo do pensamento socrático</div>
+            <div class="answer">
+                <p>Princípios fundamentais:</p>
+                <ol>
+                    <li><strong>Método socrático</strong>: Ironia e maiêutica para revelar a verdade</li>
+                    <li><strong>Ética como centro</strong>: Virtue = conhecimento ("Ninguém erra voluntariamente")</li>
+                    <li><strong>Crítica aos sofistas</strong>: Oposição ao relativismo moral</li>
+                    <li><strong>Morte como exemplo</strong>: Obediência às leis mesmo quando injustas</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-container">
+            <h2>Democracia Ateniense</h2>
+            
+            <div class="question">Como foi criada a democracia ateniense?</div>
+            <div class="answer">
+                <p><strong>Evolução histórica:</strong></p>
                 <table>
                     <tr>
-                        <th>Elemento</th>
-                        <th>Atenas</th>
-                        <th>Modelo Moderno</th>
+                        <th>Reformador</th>
+                        <th>Contribuição</th>
+                        <th>Data</th>
                     </tr>
                     <tr>
-                        <td>Tomada de decisão</td>
-                        <td>Direta</td>
-                        <td>Representativa</td>
+                        <td>Sólon</td>
+                        <td>Abolição da escravidão por dívidas, criação da Bulé</td>
+                        <td>594 a.C.</td>
                     </tr>
                     <tr>
-                        <td>Seleção de cargos</td>
-                        <td>Sorteio</td>
-                        <td>Eleições</td>
+                        <td>Clístenes</td>
+                        <td>Reorganização tribal, criação da Eclésia e ostracismo</td>
+                        <td>508/507 a.C.</td>
                     </tr>
                     <tr>
-                        <td>Participação</td>
-                        <td>10% da população (homens livres)</td>
-                        <td>Universal (em teoria)</td>
+                        <td>Péricles</td>
+                        <td>Pagamento para cargos públicos (misthophoria)</td>
+                        <td>Séc. V a.C.</td>
                     </tr>
                 </table>
             </div>
+            
+            <div class="question">Detalhes sobre o funcionamento da democracia ateniense</div>
+            <div class="answer">
+                <p><strong>Instituições principais:</strong></p>
+                <ul>
+                    <li><strong>Eclésia</strong>: Assembleia popular com poder supremo</li>
+                    <li><strong>Boulé</strong>: Conselho dos 500 (50 por tribo)</li>
+                    <li><strong>Helieia</strong>: Tribunal popular com 6.000 jurados</li>
+                    <li><strong>Ostracismo</strong>: Exílio político por 10 anos</li>
+                </ul>
+                
+                <div class="comparison-table">
+                    <p><strong>Comparação com democracia moderna:</strong></p>
+                    <table>
+                        <tr>
+                            <th>Elemento</th>
+                            <th>Atenas</th>
+                            <th>Modelo Moderno</th>
+                        </tr>
+                        <tr>
+                            <td>Tomada de decisão</td>
+                            <td>Direta</td>
+                            <td>Representativa</td>
+                        </tr>
+                        <tr>
+                            <td>Seleção de cargos</td>
+                            <td>Sorteio</td>
+                            <td>Eleições</td>
+                        </tr>
+                        <tr>
+                            <td>Participação</td>
+                            <td>10% da população (homens livres)</td>
+                            <td>Universal (em teoria)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="qa-container">
-        <h2>Pensamento de Heráclito</h2>
-        
-        <div class="question">Qual o pensamento de Heráclito de Éfeso?</div>
-        <div class="answer">
-            <p>Princípios fundamentais:</p>
-            <ul>
-                <li><strong>"Panta Rhei"</strong>: "Tudo flui" (mudança constante)</li>
-                <li><strong>Fogo como arché</strong>: Elemento primordial do cosmos</li>
-                <li><strong>Unidade dos opostos</strong>: Contrários como partes de uma harmonia</li>
-                <li><strong>Logos</strong>: Razão universal que governa todas as coisas</li>
-            </ul>
+        <div class="qa-container">
+            <h2>Pensamento de Heráclito</h2>
+            
+            <div class="question">Qual o pensamento de Heráclito de Éfeso?</div>
+            <div class="answer">
+                <p>Princípios fundamentais:</p>
+                <ul>
+                    <li><strong>"Panta Rhei"</strong>: "Tudo flui" (mudança constante)</li>
+                    <li><strong>Fogo como arché</strong>: Elemento primordial do cosmos</li>
+                    <li><strong>Unidade dos opostos</strong>: Contrários como partes de uma harmonia</li>
+                    <li><strong>Logos</strong>: Razão universal que governa todas as coisas</li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <div class="qa-container">
-        <h2>Filosofia Política de Platão</h2>
-        
-        <div class="question">Quais os principais elementos?</div>
-        <div class="answer">
-            <p>Conceitos-chave:</p>
-            <ol>
-                <li><strong>A República</strong>: Estado ideal governado por filósofos-reis</li>
-                <li><strong>Teoria das Ideias</strong>: O Bem como fundamento do governo</li>
-                <li><strong>Crítica à democracia</strong>: "Governo dos muitos ignorantes"</li>
-                <li><strong>As Leis</strong>: Versão mais pragmática em sua obra tardia</li>
-            </ol>
+        <div class="qa-container">
+            <h2>Filosofia Política de Platão</h2>
+            
+            <div class="question">Quais os principais elementos?</div>
+            <div class="answer">
+                <p>Conceitos-chave:</p>
+                <ol>
+                    <li><strong>A República</strong>: Estado ideal governado por filósofos-reis</li>
+                    <li><strong>Teoria das Ideias</strong>: O Bem como fundamento do governo</li>
+                    <li><strong>Crítica à democracia</strong>: "Governo dos muitos ignorantes"</li>
+                    <li><strong>As Leis</strong>: Versão mais pragmática em sua obra tardia</li>
+                </ol>
+            </div>
         </div>
-    </div>
+
         <div class="question">
             <p><strong>1. O que é Filosofia?</strong></p>
             <p>Resposta: A Filosofia é o estudo de questões fundamentais sobre a existência, o conhecimento, a verdade, os valores, a mente, a linguagem e a realidade.</p>
@@ -850,46 +931,125 @@
             <p><strong>1. O que é Direito?</strong></p>
             <p>Resposta: O Direito é um sistema de normas que regulam o comportamento humano e são impostas por uma autoridade competente.</p>
         </div>
+        
+        <div class="container">
+            <h1>Interpretação das Normas Jurídicas</h1>
+            
+            <p>A interpretação das normas jurídicas é um processo essencial para a aplicação do Direito, consistindo na determinação do significado e do alcance das normas para solucionar casos concretos.</p>
+            
+            <h2>Métodos de Interpretação</h2>
+            
+            <h3>1. Gramatical (ou literal)</h3>
+            <ul>
+                <li>Analisa o texto da norma conforme o sentido literal das palavras, considerando a linguagem e a sintaxe.</li>
+            </ul>
+            <div class="example">
+                <strong>Exemplo:</strong> Interpretar o significado de "furto" no Código Penal conforme sua definição legal.
+            </div>
+            
+            <h3>2. Sistemático</h3>
+            <ul>
+                <li>Examina a norma dentro do contexto do ordenamento jurídico, relacionando-a com outras leis e princípios.</li>
+            </ul>
+            <div class="example">
+                <strong>Exemplo:</strong> Interpretar um artigo do Código Civil à luz de princípios constitucionais.
+            </div>
+            
+            <h3>3. Histórico</h3>
+            <ul>
+                <li>Considera a intenção original do legislador e o contexto em que a norma foi criada.</li>
+            </ul>
+            <div class="example">
+                <strong>Exemplo:</strong> Analisar os debates parlamentares para entender o propósito de uma lei.
+            </div>
+            
+            <h3>4. Teleológico (ou finalístico)</h3>
+            <ul>
+                <li>Foca no objetivo e no fim social da norma, buscando sua finalidade prática.</li>
+            </ul>
+            <div class="example">
+                <strong>Exemplo:</strong> Interpretar uma lei ambiental de modo a garantir a proteção efetiva da natureza.
+            </div>
+            
+            <h3>5. Sociológico</h3>
+            <ul>
+                <li>Adapta a norma às realidades e necessidades sociais atuais.</li>
+            </ul>
+            <div class="example">
+                <strong>Exemplo:</strong> Aplicar uma lei antiga de forma compatível com os valores contemporâneos.
+            </div>
+            
+            <h2>Princípios da Interpretação Jurídica</h2>
+            
+            <div class="principle">
+                <strong>Unidade do ordenamento jurídico:</strong> As normas devem ser interpretadas de modo harmonioso, evitando contradições.
+            </div>
+            
+            <div class="principle">
+                <strong>Força normativa dos princípios:</strong> Princípios constitucionais (como dignidade humana e igualdade) orientam a interpretação.
+            </div>
+            
+            <div class="principle">
+                <strong>Proporcionalidade e razoabilidade:</strong> A aplicação da norma deve ser equilibrada e justa.
+            </div>
+            
+            <div class="principle">
+                <strong>Efeito útil (interpretação efetiva):</strong> A norma deve ser interpretada de modo a garantir sua aplicação prática.
+            </div>
+            
+            <div class="conclusion">
+                <h3>Conclusão</h3>
+                <p>A interpretação jurídica não é um ato mecânico, mas uma atividade complexa que exige análise crítica, considerando texto, contexto, finalidade e valores sociais. A escolha do método varia conforme o caso, buscando sempre a solução mais justa e coerente com o sistema jurídico.</p>
+                <p>Precisa de exemplos mais específicos ou de alguma área do Direito em particular?</p>
+            </div>
+        </div>
 
         <div class="question">
             <p><strong>2. Qual é a diferença entre Direito Público e Direito Privado?</strong></p>
-            <p>Resposta: O Direito Público regula as relações entre
-
-                   o Estado e os indivíduos, enquanto o Direito Privado regula as relações entre indivíduos.</p>
-</div>
-<div class="question">
-<p><strong>3. O que são fontes do Direito?</strong></p>
-<p>Resposta: As fontes do Direito são os meios pelos quais as normas jurídicas são criadas, como a legislação, a jurisprudência, a doutrina e os costumes.</p>
-</div>
-<div class="question">
-<p><strong>4. Qual é a diferença entre lei e norma jurídica?</strong></p>
-<p>Resposta: A lei é um tipo específico de norma jurídica, criada pelo Poder Legislativo, enquanto a norma jurídica é um conceito mais amplo que inclui todas as regras de conduta reconhecidas pelo ordenamento jurídico.</p>
-</div>
-<div class="question">
-<p><strong>5. Explique o princípio da legalidade.</strong></p>
-<p>Resposta: O princípio da legalidade estabelece que ninguém pode ser obrigado a fazer ou deixar de fazer algo senão em virtude de lei.</p>
-</div>
-<div class="question">
-<p><strong>6. O que é um ordenamento jurídico?</strong></p>
-<p>Resposta: Um ordenamento jurídico é um conjunto de normas jurídicas que se relacionam e se organizam de forma hierárquica e sistemática.</p>
-</div>
-<div class="question">
-<p><strong>7. Quais são os ramos do Direito?</strong></p>
-<p>Resposta: Os principais ramos do Direito são: Direito Constitucional, Direito Administrativo, Direito Penal, Direito Civil, Direito do Trabalho, Direito Tributário, entre outros.</p>
-</div>
-<div class="question">
-<p><strong>8. Explique a teoria do Estado de Thomas Hobbes.</strong></p>
-<p>Resposta: Hobbes defendia um Estado forte e centralizado, capaz de impor a paz e a ordem, através de um contrato social onde os indivíduos cedem seus direitos ao soberano.</p>
-</div>
-<div class="question">
-<p><strong>9. Qual a importância de John Locke para o Direito?</strong></p>
-<p>Resposta: Locke é considerado o pai do liberalismo político, defendendo os direitos naturais (vida, liberdade e propriedade) e o governo limitado, influenciando a Declaração de Independência dos Estados Unidos.</p>
-</div>
-<div class="question">
-<p><strong>10. Qual a contribuição de Jean-Jacques Rousseau para o pensamento jurídico?</strong></p>
-<p>Resposta: Rousseau desenvolveu a teoria do contrato social e da vontade geral, defendendo a soberania popular e a democracia direta, influenciando a Revolução Francesa.</p>
-</div>
-<h2>Vídeo Aulas</h2>
+            <p>Resposta: O Direito Público regula as relações entre o Estado e os indivíduos, enquanto o Direito Privado regula as relações entre indivíduos.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>3. O que são fontes do Direito?</strong></p>
+            <p>Resposta: As fontes do Direito são os meios pelos quais as normas jurídicas são criadas, como a legislação, a jurisprudência, a doutrina e os costumes.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>4. Qual é a diferença entre lei e norma jurídica?</strong></p>
+            <p>Resposta: A lei é um tipo específico de norma jurídica, criada pelo Poder Legislativo, enquanto a norma jurídica é um conceito mais amplo que inclui todas as regras de conduta reconhecidas pelo ordenamento jurídico.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>5. Explique o princípio da legalidade.</strong></p>
+            <p>Resposta: O princípio da legalidade estabelece que ninguém pode ser obrigado a fazer ou deixar de fazer algo senão em virtude de lei.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>6. O que é um ordenamento jurídico?</strong></p>
+            <p>Resposta: Um ordenamento jurídico é um conjunto de normas jurídicas que se relacionam e se organizam de forma hierárquica e sistemática.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>7. Quais são os ramos do Direito?</strong></p>
+            <p>Resposta: Os principais ramos do Direito são: Direito Constitucional, Direito Administrativo, Direito Penal, Direito Civil, Direito do Trabalho, Direito Tributário, entre outros.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>8. Explique a teoria do Estado de Thomas Hobbes.</strong></p>
+            <p>Resposta: Hobbes defendia um Estado forte e centralizado, capaz de impor a paz e a ordem, através de um contrato social onde os indivíduos cedem seus direitos ao soberano.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>9. Qual a importância de John Locke para o Direito?</strong></p>
+            <p>Resposta: Locke é considerado o pai do liberalismo político, defendendo os direitos naturais (vida, liberdade e propriedade) e o governo limitado, influenciando a Declaração de Independência dos Estados Unidos.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>10. Qual a contribuição de Jean-Jacques Rousseau para o pensamento jurídico?</strong></p>
+            <p>Resposta: Rousseau desenvolveu a teoria do contrato social e da vontade geral, defendendo a soberania popular e a democracia direta, influenciando a Revolução Francesa.</p>
+        </div>
+        
+        <h2>Vídeo Aulas</h2>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/huPK8_JsXkc?si=764rLRUt4uwHLdgE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -937,51 +1097,62 @@
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/pmbdwVqmRTs?si=Zhl8mW4rvjaHLcoy" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        
     </div>
-<div id="antropologia" class="discipline-content">
-<h2>Fundamentos Antropológicos e Sociológicos</h2>
-<div class="question">
-<p><strong>1. O que é Antropologia?</strong></p>
-<p>Resposta: A Antropologia é o estudo do ser humano, suas culturas, sociedades e desenvolvimento ao longo do tempo.</p>
-</div>
-<div class="question">
-<p><strong>2. Qual é o objeto de estudo da Sociologia?</strong></p>
-<p>Resposta: A Sociologia estuda as relações sociais, as instituições e as estruturas que compõem a sociedade.</p>
-</div>
-<div class="question">
-<p><strong>3. O que é cultura?</strong></p>
-<p>Resposta: Cultura é o conjunto de conhecimentos, crenças, artes, moral, leis, costumes e hábitos adquiridos pelo ser humano como membro de uma sociedade.</p>
-</div>
-<div class="question">
-<p><strong>4. Qual é a relação entre Direito e Sociedade?</strong></p>
-<p>Resposta: O Direito reflete e regula as relações sociais, buscando harmonizar os interesses individuais e coletivos, promovendo a justiça e a ordem.</p>
-</div>
-<div class="question">
-<p><strong>5. Explique o conceito de alienação em Marx.</strong></p>
-<p>Resposta: Para Marx, a alienação ocorre quando o trabalhador perde o controle sobre o produto de seu trabalho e sobre sua própria vida, tornando-se estranho a si mesmo e à sociedade.</p>
-</div>
-<div class="question">
-<p><strong>6. O que é socialização?</strong></p>
-<p>Resposta: Socialização é o processo pelo qual os indivíduos aprendem e internalizam as normas, valores e comportamentos de sua sociedade.</p>
-</div>
-<div class="question">
-<p><strong>7. Qual a importância da antropologia para o estudo do Direito?</strong></p>
-<p>Resposta: A antropologia ajuda a compreender a diversidade cultural e as diferentes formas de organização social, influenciando a interpretação e aplicação do Direito.</p>
-</div>
-<div class="question">
-<p><strong>8. O que são instituições sociais?</strong></p>
-<p>Resposta: Instituições sociais são sistemas de normas e valores que organizam e regulam o comportamento humano em áreas específicas da vida social, como a família, a religião, a educação e o Estado.</p>
-</div>
-<div class="question">
-<p><strong>9. Explique o conceito de fato social em Émile Durkheim.</strong></p>
-<p>Resposta: Para Durkheim, fatos sociais são maneiras de agir, pensar e sentir que são externas e coercitivas aos indivíduos, exercendo pressão sobre seu comportamento.</p>
-</div>
-<div class="question">
-<p><strong>10. Qual a relação entre Direito e poder?</strong></p>
-<p>Resposta: O Direito é um instrumento de poder, utilizado para legitimar e regular as relações de poder na sociedade, mas também pode ser um meio de resistência e transformação social.</p>
-</div>
-<h2>Vídeo Aulas</h2>
+
+    <div id="antropologia" class="discipline-content">
+        <h2>Fundamentos Antropológicos e Sociológicos</h2>
+        
+        <div class="question">
+            <p><strong>1. O que é Antropologia?</strong></p>
+            <p>Resposta: A Antropologia é o estudo do ser humano, suas culturas, sociedades e desenvolvimento ao longo do tempo.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>2. Qual é o objeto de estudo da Sociologia?</strong></p>
+            <p>Resposta: A Sociologia estuda as relações sociais, as instituições e as estruturas que compõem a sociedade.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>3. O que é cultura?</strong></p>
+            <p>Resposta: Cultura é o conjunto de conhecimentos, crenças, artes, moral, leis, costumes e hábitos adquiridos pelo ser humano como membro de uma sociedade.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>4. Qual é a relação entre Direito e Sociedade?</strong></p>
+            <p>Resposta: O Direito reflete e regula as relações sociais, buscando harmonizar os interesses individuais e coletivos, promovendo a justiça e a ordem.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>5. Explique o conceito de alienação em Marx.</strong></p>
+            <p>Resposta: Para Marx, a alienação ocorre quando o trabalhador perde o controle sobre o produto de seu trabalho e sobre sua própria vida, tornando-se estranho a si mesmo e à sociedade.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>6. O que é socialização?</strong></p>
+            <p>Resposta: Socialização é o processo pelo qual os indivíduos aprendem e internalizam as normas, valores e comportamentos de sua sociedade.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>7. Qual a importância da antropologia para o estudo do Direito?</strong></p>
+            <p>Resposta: A antropologia ajuda a compreender a diversidade cultural e as diferentes formas de organização social, influenciando a interpretação e aplicação do Direito.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>8. O que são instituições sociais?</strong></p>
+            <p>Resposta: Instituições sociais são sistemas de normas e valores que organizam e regulam o comportamento humano em áreas específicas da vida social, como a família, a religião, a educação e o Estado.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>9. Explique o conceito de fato social em Émile Durkheim.</strong></p>
+            <p>Resposta: Para Durkheim, fatos sociais são maneiras de agir, pensar e sentir que são externas e coercitivas aos indivíduos, exercendo pressão sobre seu comportamento.</p>
+        </div>
+        
+        <div class="question">
+            <p><strong>10. Qual a relação entre Direito e poder?</strong></p>
+            <p>Resposta: O Direito é um instrumento de poder, utilizado para legitimar e regular as relações de poder na sociedade, mas também pode ser um meio de resistência e transformação social.</p>
+        </div>
+        
+        <h2>Vídeo Aulas</h2>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/GR35c1Ixuw0?si=0IwB7fQVyNEUTe9a" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -998,18 +1169,45 @@
             <iframe src="https://www.youtube.com/embed/HH9judP5p7M?si=FyPab_kSvGk4AOtI" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
-<footer>
-<p>© 2025 Aulas de Direito. Todos os direitos reservados.</p>
-</footer>
-<script>
-function showDiscipline(discipline) {
-const contents = document.querySelectorAll('.discipline-content');
-contents.forEach(content => {
-content.classList.remove('active');
-});
-document.getElementById(discipline).classList.add('active');
-}
-</script>
+
+    <footer>
+        <p>© 2025 Aulas de Direito. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function showDiscipline(discipline) {
+            const contents = document.querySelectorAll('.discipline-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(discipline).classList.add('active');
+        }
+
+        function showAnswer(questionNum) {
+            const answerElement = document.getElementById(`answer${questionNum}`);
+            const button = event.target;
+            
+            if (answerElement.style.display === 'block') {
+                answerElement.style.display = 'none';
+                button.textContent = 'Mostrar Resposta';
+            } else {
+                answerElement.style.display = 'block';
+                button.textContent = 'Ocultar Resposta';
+            }
+        }
+
+        function showAllAnswers() {
+            const answers = document.querySelectorAll('.answer-area');
+            const buttons = document.querySelectorAll('.show-answer-btn');
+            
+            answers.forEach(answer => {
+                answer.style.display = 'block';
+            });
+            
+            buttons.forEach(button => {
+                button.textContent = 'Ocultar Resposta';
+            });
+        }
+    </script>
 </body>
 </html>
-
